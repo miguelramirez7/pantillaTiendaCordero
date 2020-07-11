@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 
 
 
+
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
@@ -14,6 +15,7 @@ export class OrdersComponent implements OnInit {
   Orders: OrderService;
   constructor(Orders: OrderService){
     this.Orders = Orders;
+    
     
    }
 

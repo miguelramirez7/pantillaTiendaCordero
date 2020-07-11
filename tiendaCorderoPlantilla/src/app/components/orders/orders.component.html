@@ -373,29 +373,38 @@
   <br>
   <br>
   <br>
-  <br> 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   <h1 style="text-align: center">Crea tu orden</h1>
   <form #form="ngForm"  (ngSubmit)="addOrden(form)">
-  
+      
       <label for="nombre">ID</label>
       <input type="text" name="id"  #id="ngModel" [(ngModel)]="Orders.Order.id"  placeholder="ID" />
   
       <label for="apellidos">Adress</label>
       <input type="text" name="address"  #address="ngModel" [(ngModel)]="Orders.Order.address"  placeholder="Adress"/>
 
-      <label for="apellidos">Amount</label>
-      <input type="text" name="address"  #address="ngModel" [(ngModel)]="Orders.Order.amount"  placeholder="Amount"/>
-
       <label for="apellidos">Courier</label>
-      <input type="text" name="address"  #address="ngModel" [(ngModel)]="Orders.Order.courier"  placeholder="Courier"/>
+      <input type="text" name="address"  #Curier="ngModel" [(ngModel)]="Orders.Order.courier"  placeholder="Courier"/>
 
-      <label for="apellidos">Discount</label>
-      <input type="text" name="address"  #address="ngModel" [(ngModel)]="Orders.Order.discount"  placeholder="Discount"/>
+      <h2>PRODUCTO 1</h2>
+      <label for="apellidos">Codigo Producto</label>
+      <input type="text" name="address"  #idpa="ngModel" [(ngModel)]="Orders.Order.orderItems[0].idProduct"  placeholder="id"/>
+
+      <label for="apellidos">Cantidad</label>
+      <input type="text" name="address"  #cant="ngModel" [(ngModel)]="Orders.Order.orderItems[0].quantity"  placeholder="cantidad"/>
+
+      <label for="apellidos">Precio</label>
+      <input type="text" name="address"  #precio="ngModel" [(ngModel)]="Orders.Order.orderItems[0].price"  placeholder="precio"/>
+
+      <h2>PRODUCTO 2</h2>
+
+      <label for="apellidos">Codigo Producto</label>
+      <input type="text" name="address"  #idpb="ngModel" [(ngModel)]="Orders.Order.orderItems[1].idProduct"  placeholder="id"/>
+
+      <label for="apellidos">Cantidad</label>
+      <input type="text" name="address"  #cantb="ngModel" [(ngModel)]="Orders.Order.orderItems[1].quantity"  placeholder="cantidad"/>
+
+      <label for="apellidos">Precio</label>
+      <input type="text" name="address"  #preciob="ngModel" [(ngModel)]="Orders.Order.orderItems[1].price"  placeholder="precio"/>
     
       <button>Guardar Orden</button>
       

@@ -1,19 +1,28 @@
-
+import { OrderItems } from './order-items';
 
 export class Order {
 
     id: string;
     address: string;
-    amount: number;
     courier: string;
-    discount:number;
+    orderItems: OrderItems[]=
+    [   {
+        "idProduct":  "",
+        "quantity":   null,
+        "price":      null
+        },
+        {
+            "idProduct":  "",
+            "quantity":   null,
+            "price":      null
+        }
+    ];
+    
 
-    constructor(id=null,address=null,amount=null,courier=null,discount=null){
+    constructor(id=null,address=null,courier=null){
         this.id = id;
         this.address = address;
-        this.amount=amount;
         this.courier=courier;
-        this.discount=discount;
     }
 
     imprime(){

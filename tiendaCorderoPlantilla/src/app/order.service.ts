@@ -12,6 +12,7 @@ export class OrderService {
   readonly url ='http://localhost:7000/api/order';
   constructor(private http: HttpClient) {  
     this.Order = new Order();
+    
   }
 
   postOrder(order: Order){
